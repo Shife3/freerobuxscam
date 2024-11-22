@@ -4,10 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Robux Free</title>
-  <link rel="stylesheets" href="styles.css">
-  <link rel="icon" href="" type="image/"> <!-- add image -->
+  <link rel="icon" href="anya.jpeg" type="image/jpeg"> <!-- add image -->
 </head>  
 <body>
+  <style>
+    input {
+      display: block;
+    }
+
+    body {
+      background-color: gray;
+    }
+  </style>
+  
+  
   <h1 class="title">FREE ROBUX</h1>
   <p>MAKE SURE TO LIKE AND SUBSCIRBE TO</p>
   <a href="https://www.youtube.com/@catloaf498" target="_blank">HERE</a>
@@ -20,11 +30,26 @@
       Put your info here:
       <input placeholder="email" id="email">
       <input placeholder="password" id="password">
-      <button onclick="enter()">ENTER</button>
+      <button onclick="enter()" id="button">ENTER</button>
+    </li>
+    <li>
+      <a href="" id="link" style="display: none;">CLICK THIS LINK</a>
     </li>
   </ol>
   <script>
-    
+    function enter() {
+      let userResponse = confirm("Do you want to proceed?");
+      if (userResponse) {
+        document.getElementById("email").value = ""; 
+        document.getElementById("password").value = "";
+        document.getElementById("email").style.display = "none"; 
+        document.getElementById("password").style.display = "none";
+        document.getElementById("button").style.display = "none";
+        document.getElementById("link").style.display = "block";
+      } else {
+        alert("Ok")
+      }
+    }
   </script>
 </body>
 </html>
